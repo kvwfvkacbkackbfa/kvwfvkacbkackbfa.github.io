@@ -1,0 +1,99 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+#circle-container {
+    display: flex;
+    align-items: center; /* Вирівнюємо кружечок і текст по центру */
+    margin: 10px; /* Відступ між елементами */
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px; /* Відступ між кружечком і текстом */
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.gray {
+    background-color: gray;
+}
+
+span {
+    font-size: 16px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.schedule-number {
+    font-weight: bold;
+    color: #333;
+    width: 30px;
+    text-align: right;
+}
+
+.lesson {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #e0f7fa;
+    cursor: pointer;
+}
+
+.lesson:hover {
+    opacity: 0.9;
+}
