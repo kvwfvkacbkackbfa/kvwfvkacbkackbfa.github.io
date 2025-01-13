@@ -86,6 +86,33 @@ const daySelect = document.getElementById("daySelect");
 const viewSelect = document.getElementById("viewSelect");
 const scheduleDiv = document.getElementById("schedule");
 
+// Білий список користувачів
+const allowedUsers = ["YourUsername", "FriendUsername"]; // Замініть на свої Telegram username
+
+function checkAuth() {
+    const userData = localStorage.getItem("telegramUser");
+    if (userData) {
+        const user = JSON.parse(userData);
+        if (allowedUsers.includes(user.username)) {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("main-content").style.display = "block";
+        } else {
+            alert("У вас немає доступу до цього сайту.");
+        }
+    }
+}
+
+// Зберігаємо дані Telegram в локальному сховищі після успішного входу
+if (window.location.search.includes("hash")) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const userData = Object.fromEntries(urlParams.entries());
+    localStorage.setItem("telegramUser", JSON.stringify(userData));
+    window.location.href = "/"; // Перенаправляємо на головну
+}
+
+checkAuth();
+
+// Рендеринг розкладу
 function renderSchedule() {
     const day = daySelect.value;
     const view = viewSelect.value;

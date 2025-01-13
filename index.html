@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Розклад уроків</title>
     <link rel="stylesheet" href="styles.css">
+    <script async src="https://telegram.org/js/telegram-widget.js?7"
+            data-telegram-login="fkwfjwdjwfjbot"
+            data-size="large"
+            data-radius="10"
+            data-auth-url="https://rozklad.cbu.net/auth"
+            data-request-access="write"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Розклад уроків<br><a href = "https://nz.ua">nz.ua</a>   /   <a href = "https://client.rozklad.org/files/rozklad/rr/r_2147.html?1710694245">rozklad</a></h1>
-        <!--<div id="circle-container">
-    <div class="circle red"></div> <span>Олег</span>
-</div>
-<div id="circle-container">
-    <div class="circle blue"></div> <span>Коля</span>
-</div>-->
+    <div id="login" class="login">
+        <h1>Будь ласка, увійдіть через Telegram</h1>
+    </div>
 
+    <div id="main-content" class="container" style="display: none;">
+        <h1>Розклад уроків</h1>
         <div class="controls">
             <label for="daySelect">День тижня:</label>
             <select id="daySelect">
@@ -28,7 +31,7 @@
         </div>
 
         <div class="controls">
-            <label for="viewSelect">Tип розкладу:</label>
+            <label for="viewSelect">Тип розкладу:</label>
             <select id="viewSelect">
                 <option value="lessons">Розклад уроків</option>
                 <option value="bells">Розклад дзвінків</option>
